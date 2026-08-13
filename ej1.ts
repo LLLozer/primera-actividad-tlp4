@@ -1,8 +1,8 @@
 class Producto {
-    nombre: string = "Heladera";
-    precio: number = 2000000;
-    categoria: string = "electrónica";
-    stock: number = 20;
+    nombre: string;
+    precio: number;
+    categoria: string;
+    stock: number;
 
     constructor(nombre: string, precio: number, categoria: string, stock: number) {
         this.nombre = nombre
@@ -31,7 +31,7 @@ class Producto {
             this.stock -= cantidad
         }
         else {
-            return `Error: No se pudo vender el producto. No hay stock disponible`
+            return "Error: No se pudo vender el producto. No hay stock disponible"
             // Justificación: Permite saber el por qué no se vendió nada
         }
         return `Stock actual: ${this.stock}`
